@@ -64,10 +64,9 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(entries)
         });
-        const results = await res.json();
-        outputEl.textContent = results.map(r =>
-          `${r.phone} - ${r.code} - ${r.pass2fa || "无密码"}`
-        ).join("\n");
+const text = await res.text();
+outputEl.textContent = text;
+
       } catch (e) {
         outputEl.textContent = "请求失败：" + e.message;
       }
