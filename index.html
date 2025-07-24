@@ -59,7 +59,7 @@
       outputEl.textContent = "正在处理 " + entries.length + " 条记录...\n";
 
       try {
-        const res = await fetch("https://telegram-code-api-1.onrender.com/batch-codes", {
+        const res = await fetch("https://telegram-code-api-qd41.onrender.com", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(entries)
